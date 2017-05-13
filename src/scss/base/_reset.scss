@@ -1,15 +1,16 @@
 /* Reset */
 
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-}
-
 html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     line-height: 1.15;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
 body {
@@ -22,7 +23,6 @@ h2,
 h3,
 h4,
 h5,
-h6,
 p,
 blockquote,
 figure,
@@ -41,8 +41,7 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5 {
     font-size: inherit;
 }
 
@@ -69,7 +68,7 @@ button {
     cursor: pointer;
 }
 
-::-moz-focus-inner {
+button::-moz-focus-inner {
     padding: 0;
     border: 0;
 }

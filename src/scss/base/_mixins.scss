@@ -1,1 +1,15 @@
 /* Mixins */
+
+// Mobile first layout 
+@mixin tablet {
+    @media (min-width: #{$mobile}) {
+        @content;
+    }
+}
+
+// Break on desktop
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}

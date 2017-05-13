@@ -1,1 +1,15 @@
 /* Variables */
+
+/* Breakpoints */
+
+$mobile: 600px;
+$desktop: 1000px;
+
+/* Colors */
+
+$background: white;
+$primary-color: #0366EE;
+$secondary-color: #5FBA7D;
+$accent-color: #cdcdcd;
+$link-color: $primary-color;
+$link-hover-color: darken($link-color, 15%);
