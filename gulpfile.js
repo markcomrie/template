@@ -6,6 +6,7 @@ var cssnano = require('gulp-cssnano');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var rename = require('gulp-rename');
+var imagemin = require('gulp-imagemin');
 
 gulp.task('workflow', function () {
     gulp.src('./src/**/*.scss')
@@ -27,7 +28,12 @@ gulp.task('workflow', function () {
         .pipe(gulp.dest('./dist/css/'))
 });
 
-//Watch
+gulp.task('images', function() {
+    return gulp.src('src/images/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/images'))
+});
+
 gulp.task('default', function () {
     gulp.watch('./src/**/*.scss', ['workflow']);
 });
