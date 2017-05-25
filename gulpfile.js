@@ -34,6 +34,18 @@ gulp.task('images', function() {
         .pipe(gulp.dest('dist/images'))
 });
 
+gulp.task('copyhtml', function() {
+    return gulp.src('src/*.html')
+        .pipe(gulp.dest('dist'))
+});
+
+gulp.task('copyjs', function() {
+    return gulp.src('src/js/**/*.js')
+        .pipe(gulp.dest('dist/js'))
+});
+
 gulp.task('default', function () {
-    gulp.watch('./src/**/*.scss', ['workflow']);
+    gulp.watch('./src/scss/**/*.scss', ['workflow']);
+    gulp.watch('./src/*.html', ['copyhtml']);
+    gulp.watch('./src/js/**/*.js', ['copyjs'])
 });
