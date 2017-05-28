@@ -1,9 +1,11 @@
 /* Import */
 
-// Configuration
 @import "base/variables";
 @import "base/mixins";
-// Reset
 @import "base/reset";
-// Components
 @import "components/layout";
+@import "components/helpers";
+@import "components/header";
+@import "components/navigation";
+@import "components/body";
+@import "components/footer";
